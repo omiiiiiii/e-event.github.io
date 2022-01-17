@@ -1,21 +1,27 @@
-extends Adminbase.pug
+doctype html
+html
+    head
+        title Om's Dance Academy
+        style
+            include ../static/adminApprovestyle.css
+            include ../static/Adminbasestyle.css
+        script(src='/static/AdminApprove.js')
 
-
-block style 
-    style
-      include ../static/adminApprovestyle.css
-      include ../static/Adminbasestyle.css
-
-block scripts
-    script(src='/static/AdminApprove.js')
-
-
-block content
-    div.container 
-        div.innercontainer
-            form(action= "/finalAdminAprroval", method= "post", class= "Reset" )
-                h1  Confirm Approval  
-                <input type="text" class= "EventInput" id="Username" name="Username" readonly  required>
-                <input type="Password" class= "EventInput" id="Password" name="Password" readonly  required>
-                button(class="Ebtn" id="AddEvent"  onclick ="dlt()")
-                        |Confirm
+    body
+        nav#navbar
+          ul
+            div#logo
+              img(src="/static/img/3.png")
+              | Admin ODA
+            li #[a(href="/contact") Contact Us]
+        block content
+            div.container 
+                div.innercontainer
+                    form(action= "/finalAdminAprroval", method= "post", class= "Reset" )
+                        h1  Confirm Approval  
+                        <input type="text" class= "EventInput" id="Username" name="Username" readonly  required>
+                        <input type="Password" class= "EventInput" id="Password" name="Password" readonly  required>
+                        button(class="Ebtn" id="AddEvent"  onclick ="dlt()")
+                                |Confirm
+        footer#footer
+          | Copyright © 2021 OmAcademy.com | All Rights Reserved
