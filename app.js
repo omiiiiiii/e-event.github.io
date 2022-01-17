@@ -3,6 +3,7 @@ const path = require("path");
 const nodemailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 80;
+const fs = require('fs')
 const nodemon = require('nodemon');
 const bodyparser = require("body-parser");
 const mongoose = require('mongoose');
@@ -22,6 +23,9 @@ mongoose.connect('mongodb+srv://Omd256:OMom%409090@cluster0.wb6lt.mongodb.net/Co
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded());
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true})); 
 
 const store = new MongoDbsession({
   uri:"mongodb+srv://Omd256:OMom%409090@cluster0.wb6lt.mongodb.net/ContactDance?retryWrites=true&w=majority",
