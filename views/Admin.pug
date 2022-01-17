@@ -1,23 +1,29 @@
-extends Adminbase.pug
+doctype html
+html
+    head
+        title Om's Dance Academy
+        style
+            include ../static/Adminstyle.css
+            include ../static/Adminbasestyle.css
+        link(rel='stylesheet' media='only screen and (max-device-width:600px)' href='../static/phoneadminstyle.css')
+        script(src='/static/Admin.js')
 
-
-block style 
-    style
-      include ../static/Adminstyle.css
-      include ../static/Adminbasestyle.css
-    link(rel='stylesheet' media='only screen and (max-device-width:600px)' href='../static/phoneadminstyle.css')
-
-block scripts
-      script(src='/static/Admin.js')
-
-
-block content
-  div.container 
-    div.innercontainer
-      form(action= "/AdminLogin", method= "POST", class= "loginform ")
-        p Admin Login ODA 
-        <input type="email"class= "loginInput" name="Username" placeholder="Enter your Username.." required>
-        <input type="password" class= "loginInput" name="pass" placeholder="Enter your password.." required>
-        button(class="Lbtn")
-          |Login
-        li #[a(href="/AdminSignup") Dont have an account Signup]
+    body
+        nav#navbar
+          ul
+            div#logo
+              img(src="/static/img/3.png")
+              | Admin ODA
+            li #[a(href="/contact") Contact Us]
+        block content
+          div.container 
+            div.innercontainer
+              form(action= "/AdminLogin", method= "POST", class= "loginform ")
+                p Admin Login ODA 
+                <input type="email"class= "loginInput" name="Username" placeholder="Enter your Username.." required>
+                <input type="password" class= "loginInput" name="pass" placeholder="Enter your password.." required>
+                button(class="Lbtn")
+                  |Login
+                li #[a(href="/AdminSignup") Dont have an account Signup]
+        footer#footer
+          | Copyright © 2021 OmAcademy.com | All Rights Reserved
