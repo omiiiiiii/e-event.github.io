@@ -27,7 +27,7 @@ function CheckContact() {
     if (input.checkValidity()) {
     }
     else {
-        alert("Contact number should be validand have 10 digit")
+        alert("Contact number should be valid and have 10 digit")
         document.getElementById("Contact").value = ""
     }
 }
@@ -37,7 +37,7 @@ function CheckAContact() {
     if (input1.checkValidity()) {
     }
     else {
-        alert("Alternate Contact number should be validand have 10 digit")
+        alert("Alternate Contact number should be valid and have 10 digit")
         document.getElementById("Alternate").value = ""
     }
     if(input1.value!=""&&input1.value==input2.value){
