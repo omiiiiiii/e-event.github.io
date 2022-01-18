@@ -1,16 +1,4 @@
-.innercontainer{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 498px;
-    padding: 80px 40px;
-    box-sizing: border-box;
-    background: antiquewhite;
-    box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 75%);
-    border-radius: 10px;
-}
+
 .container{
     min-height: 85vh;
     justify-content: center;
