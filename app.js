@@ -42,13 +42,15 @@ app.use(session({
 
 // Connecting to Email
 var transporter = nodemailer.createTransport({
-    service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, 
     auth: {
       user: 'dwivedi156om@gmail.com',
       pass: 'OMom@25836'
     }
   });
-
+  
 
 
 
