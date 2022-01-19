@@ -3,10 +3,7 @@ window.addEventListener('load',() => {
     
     ApproveArraystr = localStorage.getItem('Approve')
     ApproveArray = JSON.parse(ApproveArraystr);
-    if (ApproveArray.length === 0) {
-        alert("Sorry we dont have anything to Approve");
-    }
-    else{
+
     ApproveArray=[];
     ApproveArraystr = localStorage.getItem('Approve')
     ApproveArray = JSON.parse(ApproveArraystr);
@@ -16,7 +13,6 @@ window.addEventListener('load',() => {
     });
     document.getElementById("Password").value=k;
     document.getElementById("Username").value=j;
-}
 })
 
 function dlt(){
