@@ -170,9 +170,6 @@ function Approve(itemIndex) {
 }
 //Admin approve function 
 function AdminApprove(item) {
-    ApproveArraystr = localStorage.getItem('Approve')
-    ApproveArray = JSON.parse(ApproveArraystr);
-    if (ApproveArray.length === 0) {
         ApproveArray = [];
         array1 = adminuserjasonArray[item];
         // array = arr.split(',')
@@ -183,12 +180,6 @@ function AdminApprove(item) {
         adminuserjasonArray.splice(item, 1);
         localStorage.setItem('adminuserjason', JSON.stringify(adminuserjasonArray));
         adminupdate()
-    }
-    else{
-       alert('U can not approve more than one at a time')
-    }
-   
-    
 }
 // Admin reject
 function Admindelete(item) {
